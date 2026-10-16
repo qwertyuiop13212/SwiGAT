@@ -8,17 +8,6 @@ Chest X-ray classification remains challenging because subtle radiographic patte
 
 SwiGAT is a **gaze-guided graph-based framework** that incorporates radiologist gaze maps as continuous spatial priors and performs relational reasoning among regional visual features.
 
-SwiGAT consists of three main components:
-
-- **Dual-Branch Feature Refinement**  
-  Independently refines the X-ray and gaze representations using branch-specific instances of the proposed FocusFilterBlock (FFB).
-
-- **Gaze-Guided Feature Weighting**  
-  Uses the refined gaze map to weight the refined X-ray map through element-wise multiplication, producing gaze-modulated region-level features.
-
-- **Graph-Based Relational Reasoning**  
-  Constructs a fully connected graph over the regional features and employs a graph attention network (GAT) to model long-range inter-regional dependencies among spatially distant but diagnostically related regions.
-
 ## Architecture
 
 ![SwiGAT architecture](fig/model.png)

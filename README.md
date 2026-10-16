@@ -142,10 +142,3 @@ SwiGAT/
 
 Users only need to execute `main.py`. Model construction, dataset loading, training, evaluation, and metric calculation are handled internally according to the selected configuration file.
 
-## Citation
-
-If you find this repository useful, please cite our paper. Citation information will be updated after publication.
-
-## License
-
-This repository provides the implementation of SwiGAT. The chest X-ray images and gaze annotations are governed by the licenses and data-use requirements of their original datasets.

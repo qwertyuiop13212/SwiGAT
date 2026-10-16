@@ -1,0 +1,29 @@
+experiment: egd_cxr
+seed: 42
+seeds: [42, 3407, 2027]
+device: auto
+output_dir: checkpoints/egd_cxr
+
+data:
+  train_csv: data/egd_cxr/train.csv
+  test_csv: data/egd_cxr/test.csv
+  image_size: 224
+  num_classes: 3
+  class_names: [Normal, CHF, Pneumonia]
+  num_workers: 4
+
+model:
+  pretrained_backbone: true
+  feature_dim: 96
+  ffb_hidden_dim: 96
+  gaze_hidden_dim: 96
+  gat_heads: 4
+  dropout: 0.2
+
+training:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 5.0e-5
+  weight_decay: 1.0e-4
+  amp: true
+

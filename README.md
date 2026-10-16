@@ -69,29 +69,4 @@ SwiGAT achieves the highest overall performance among the compared image-based a
 
 The reported results are averaged over three runs with different random seeds.
 
-## Repository Structure
-
-```text
-SwiGAT/
-├── main.py
-├── configs/
-│   ├── egd_cxr.yaml
-│   └── siim_acr.yaml
-├── models/
-│   ├── swigat.py
-│   ├── focus_filter_block.py
-│   └── graph_attention.py
-├── datasets/
-│   └── chest_xray_dataset.py
-├── utils/
-│   ├── metrics.py
-│   └── seed.py
-├── fig/
-│   ├── frame.png
-│   └── result.png
-├── requirements.txt
-└── README.md
-```
-
-Users only need to execute `main.py`. Model construction, dataset loading, training, evaluation, and metric calculation are handled internally according to the selected configuration file.
 

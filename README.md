@@ -35,53 +35,6 @@ SwiGAT is evaluated on two gaze-annotated chest X-ray datasets:
 
 The repository does not redistribute chest X-ray images or radiologist gaze data. Please obtain the datasets from their respective official sources and comply with their licenses and data-use requirements.
 
-Organize each dataset as follows:
-
-```text
-data/
-├── egd_cxr/
-│   ├── images/
-│   │   ├── sample_0001.png
-│   │   └── ...
-│   ├── gaze_maps/
-│   │   ├── sample_0001.png
-│   │   └── ...
-│   ├── train.csv
-│   └── test.csv
-│
-└── siim_acr/
-    ├── images/
-    │   ├── sample_0001.png
-    │   └── ...
-    ├── gaze_maps/
-    │   ├── sample_0001.png
-    │   └── ...
-    ├── train.csv
-    └── test.csv
-```
-
-Each CSV file should contain the following columns:
-
-```text
-image,gaze,label
-sample_0001.png,sample_0001.png,0
-sample_0002.png,sample_0002.png,1
-```
-
-The `image` and `gaze` entries indicate the corresponding filenames in the `images` and `gaze_maps` directories. The `label` column contains the integer class label.
-
-All chest X-ray images and gaze maps are resized to `224 × 224`. Gaze maps are normalized and provided to the model as single-channel inputs.
-
-## Installation
-
-Create a Python environment and install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-The implementation requires Python, PyTorch, Torchvision, NumPy, Pandas, scikit-learn, and the graph-learning dependencies listed in `requirements.txt`.
-
 ## Training and Evaluation
 
 `main.py` is the single entry point for both training and evaluation.
